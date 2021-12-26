@@ -2094,7 +2094,7 @@ button,
     border-bottom: 0;
     color: inherit;
     font-family: "Roboto Slab", serif;
-    font-size: 1.75em; }
+    font-size: 2.25em; }
   #header .icons {
     text-align: right; }
   @media screen and (max-width: 1680px) {
@@ -2143,7 +2143,9 @@ button,
     flex-shrink: 0;
     display: block;
     margin: 0 0 2em 4em;
-    width: 50%; }
+    width: 50%; 
+    height: inherit;
+    object-fit: cover;}
     #banner .image img {
       height: 100%;
       -moz-object-fit: cover;
@@ -2154,7 +2156,8 @@ button,
       -webkit-object-position: center;
       -ms-object-position: center;
       object-position: center;
-      width: 100%; }
+      width: 90%; 
+      height: 90%;}
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
