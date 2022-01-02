@@ -2197,6 +2197,13 @@ button,
   @media screen and (orientation: portrait) and (max-width: 480px) {
     #banner .image {
       max-height: 35vh; } }
+      .wrapper {
+        height: 100vh;
+        /*This part is important for centering*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
 /* Footer */
 #footer .copyright {
