@@ -2302,17 +2302,17 @@ button,
     box-sizing: border-box;
 }
 body {
-    background-color: #ecf0f1;
+    background-color: #ffffff;
 }
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #fff;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
     width: 100%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 1px;
 }
 .gallery-item {
     flex-basis: 32.7%;
