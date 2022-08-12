@@ -1673,6 +1673,7 @@ button,
         top: 50%;
         width: 7em; }
     .features article .content {
+      
       -moz-flex-grow: 1;
       -webkit-flex-grow: 1;
       -ms-flex-grow: 1;
@@ -1683,6 +1684,7 @@ button,
       flex-shrink: 1;
       width: 100%; }
       .features article .content > :last-child {
+        vertical-align: top;
         margin-bottom: 0; }
   @media screen and (max-width: 980px) {
     .features {
