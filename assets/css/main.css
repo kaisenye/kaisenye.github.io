@@ -1761,7 +1761,7 @@ button,
     position: relative;
     width: calc(33.33333% - 6em); }
     .posts article:before {
-      background: rgba(210, 215, 217, 0.75);
+      /* background: rgba(210, 215, 217, 0.75); */
       content: '';
       display: block;
       height: calc(100% + 6em);
@@ -1770,7 +1770,7 @@ button,
       top: 0;
       width: 1px; }
     .posts article:after {
-      background: rgba(210, 215, 217, 0.75);
+      /* background: rgba(210, 215, 217, 0.75); */
       bottom: -3em;
       content: '';
       display: block;
