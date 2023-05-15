@@ -1,0 +1,22 @@
+
+
+.nav-bar {
+    position: fixed;
+    width: 3rem;
+    height: 22rem;
+    border: 0.5px solid var(--border-color);
+    border-radius: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav-bar-item {
+    color: var(--gray-text);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

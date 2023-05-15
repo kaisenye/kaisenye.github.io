@@ -1,0 +1,22 @@
+
+.title {
+    color: white;
+    font-size: 3rem;
+}
+
+.title p {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.title .highlight-text {
+    margin-left: 1rem;
+    color: var(--primary-color);
+}
+
+.sub-title {
+    color: white;
+    font-size: 1rem;
+    margin-top: 3rem;
+}

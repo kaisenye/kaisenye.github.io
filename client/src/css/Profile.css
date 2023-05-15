@@ -1,0 +1,122 @@
+.profile {
+    width: 100%;
+    padding: 1.5rem;
+    border: 0.8px solid var(--border-color);
+    border-radius: 1.5rem;
+}
+
+.profile-name h1 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* profile pic */
+.profile-pic {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.profile-pic:hover{
+    scale: 1.05;
+}
+
+.profile-pic-overlay {
+    width: 15rem;
+    height: 13rem;
+    border-radius: 2rem;
+    background-color: rgb(229, 229, 229);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic-overlay img {
+    width: 130%;
+    position: relative;
+    top: 1.5rem;
+}
+
+
+/* profile info */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.profile-info p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 1rem 0 0 0;
+}
+
+
+/* social */
+.profile-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.profile-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--border-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.profile-icon:hover {
+    scale: 1.05;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* contact btn */
+.profile-contact {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-btn {
+    width: 90%;
+    height: 3rem;
+    border: 0;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-btn .icon-contact-email {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+.contact-btn:hover {
+    scale: 1.05;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
