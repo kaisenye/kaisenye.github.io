@@ -1,0 +1,49 @@
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.experience-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.experience-company {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.experience-company-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.experience-company-text {
+    font-size: 1.2rem;
+}
+
+.experience-date {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.experience-description {
+    max-width: 70vh;
+}
+
+.experience-item:hover .experience-date{
+    color: var(--primary-color);
+}

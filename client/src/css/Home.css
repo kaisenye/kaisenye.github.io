@@ -1,22 +1,83 @@
-
 .title {
-    color: white;
-    font-size: 3rem;
+  color: white;
+  font-size: 4rem;
+  max-width: 45rem;
+  animation: move-left-animation 0.8s ease-out forwards;
 }
 
 .title p {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
 }
 
 .title .highlight-text {
-    margin-left: 1rem;
-    color: var(--primary-color);
+  margin-left: 1rem;
+  color: var(--primary-color);
 }
 
 .sub-title {
-    color: white;
-    font-size: 1rem;
-    margin-top: 3rem;
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  max-width: 45rem;
+  animation: move-left-animation 0.8s ease-out forwards;
+}
+
+.content {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin-top: 3rem;
+  max-width: 70vh;
+  animation: move-up-animation 0.5s ease-out forwards;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 17rem;
+  animation: move-up-animation 0.8s ease-out forwards;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+
+.stats-number {
+  color: var(--primary-color);
+  font-size: 4rem;
+  margin: 0 0 1rem 0;
+}
+
+.stats-text {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* animation */
+@keyframes move-left-animation {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
