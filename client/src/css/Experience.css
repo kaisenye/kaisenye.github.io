@@ -7,11 +7,13 @@
     margin-bottom: 2rem;
     color: white;
     transition: color 0.3s ease-in-out;
+    overflow: auto
 }
 
 .experience-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 .experience-company {
@@ -25,8 +27,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     font-size: 1rem;
     margin-right: 0.5rem;
+}
+
+.experience-img-logo {
+    width: 1.5rem;
 }
 
 .experience-company-text {
@@ -36,14 +43,57 @@
 .experience-date {
     font-size: 1rem;
     color: var(--secondary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     transition: color 0.3s ease-in-out;
 }
 
-.experience-description {
-    max-width: 70vh;
+.experience-tags-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
 }
 
-.experience-item:hover .experience-date{
+.experience-tag {
+    border: 0.5px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 0.2rem 0.5rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+/* hover effect */
+.experience-tag:hover {
     color: var(--primary-color);
+    border: 0.5px solid var(--primary-color);
+    scale: 0.98;
+}
+
+
+/* scroll animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s ease-out;
+}
+
+.fade-up.fade-up-visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.5s ease-out;
+}
+
+.fade-left.fade-left-visible {
+    transform: translateX(0);
+    opacity: 1;
 }

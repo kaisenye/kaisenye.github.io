@@ -1,0 +1,52 @@
+
+
+.education-item {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 0.5px solid var(--border-color);
+    border-radius: 1rem;
+    width: 80%;
+    transition: all 0.2s ease-in-out;
+}
+
+.education-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.education-subtitle {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+
+.education-item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.education-logo .education-img-logo {
+    width: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* hover effect */
+.education-item:hover {
+    border: 0.8px solid var(--primary-color);
+    color: var(--primary-color);
+    scale: 1.01;
+}
+.education-item:hover .education-subtitle {
+    color: var(--primary-color);
+}

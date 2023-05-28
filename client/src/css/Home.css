@@ -20,16 +20,15 @@
   color: white;
   font-size: 2.5rem;
   margin-top: 1rem;
-  max-width: 45rem;
-  animation: move-left-animation 0.8s ease-out forwards;
+  width: 80%;
 }
 
 .content {
   color: var(--secondary-color);
   font-size: 1rem;
   margin-top: 3rem;
-  max-width: 70vh;
-  animation: move-up-animation 0.5s ease-out forwards;
+  width: 80%;
+  line-height: 1.5;
 }
 
 .stats {

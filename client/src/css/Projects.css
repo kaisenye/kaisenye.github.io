@@ -1,0 +1,73 @@
+
+.projects .sub-title {
+    margin-bottom: 2.5rem;
+}
+
+
+
+.highlight-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.project-primary {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 2rem;
+    background-image: url('../assets/project1-cover.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 25rem;
+    width: 45rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.project-primary-inner {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.project-primary-tag {
+    background-color: rgb(255, 255, 255);
+    color: var(--black-text);
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    font-size: 15px;
+}
+
+.project-primary-title {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+
+/* animation */
+
+.move-up {
+    transform: translateY(70px);
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+}
+
+.move-up.move-up-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
