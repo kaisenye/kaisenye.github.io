@@ -19,6 +19,7 @@
 }
 
 .project-primary {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -26,7 +27,6 @@
     justify-content: flex-end;
     border: none;
     border-radius: 2rem;
-    background-image: url('../assets/project1-cover.png');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -35,6 +35,23 @@
     margin-bottom: 1rem;
     padding-bottom: 1.5rem;
     padding-left: 2rem;
+}
+
+.project-primary:hover {
+    scale: 1.02;
+}
+
+.project1 {
+    background-image: url('../assets/project1-cover.png');
+}
+
+.project2 {
+    background-image: url('../assets/project1-cover.png');
+}
+
+.project3 {
+    background-image: url('../assets/project3-cover.png');
+    background-size: cover; /* Scale the image to cover the element */    
 }
 
 .project-primary-inner {
@@ -54,9 +71,13 @@
 
 .project-primary-title {
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    margin-bottom: 3rem;
     font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
 }
+
 
 
 /* animation */
@@ -64,7 +85,7 @@
 .move-up {
     transform: translateY(70px);
     opacity: 0.5;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .move-up.move-up-visible {

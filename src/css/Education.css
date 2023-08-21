@@ -10,7 +10,7 @@
     border: 0.5px solid var(--border-color);
     border-radius: 1rem;
     width: 80%;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.01s ease;
 }
 
 .education-title {
