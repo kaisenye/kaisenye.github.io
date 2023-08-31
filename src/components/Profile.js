@@ -20,7 +20,7 @@ const Profile = () => {
       </div>
       <div className="profile-info">
         <p id="profile-email">Comp Eng @USC</p>
-        <p id="profile-location">Base in Los Angeles, CA</p>
+        <p id="profile-location">Based in Los Angeles, CA</p>
       </div>
       <div className="profile-social">
         <div className="profile-icon">

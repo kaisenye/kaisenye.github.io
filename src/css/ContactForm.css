@@ -1,0 +1,123 @@
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90vh;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.contact-form-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-form-info-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.contact-form-info-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+
+.contact-form-item {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    text-decoration: none;
+    transition: all 0.01s ease;
+}
+
+.contact-form-item label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-item input, textarea {
+    width: 80%;
+    padding: 0.5rem 0rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: sans-serif;
+    background-color: transparent;
+    color: gray;
+    transition: all 0.01s ease;
+} 
+
+.contact-form-item input, textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    caret-color: #ffffff;
+}
+
+.contact-form-item textarea {
+    width: 100%;
+    height: 15rem;
+    border-bottom: 0.5px solid gray;
+}
+
+.contact-message {
+    margin-bottom: 1rem;
+}
+
+.attachment-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.attachment-label .attachment-icon, .attachment-label p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-right: 0.5rem;
+}
+
+.attachment-icon {
+    margin-right: 0.5rem;
+}
+
+#attachment {
+    display:contents;
+}
+
+.file-name {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.contact-attachment {
+    margin-bottom: 2rem;
+}
+
+.contact-email {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.contact-form-btn-container {
+    width: 16rem;
+    margin-top: 2rem;
+}

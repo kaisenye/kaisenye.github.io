@@ -34,10 +34,9 @@ const Experience = () => {
                 </div>
                 <div className="experience-date">Summer 2022</div>
                 <div className="experience-tags-container">
-                    <div className="experience-tag">Data Science</div>
+                    <div className="experience-tag">Python</div>
                     <div className="experience-tag">Machine Learning</div>
                     <div className="experience-tag">CI/CD Pipeline</div>
-                    <div className="experience-tag">Python</div>
                     <div className="experience-tag">SQL</div>
                     <div className="experience-tag">BigQuery</div>
                     <div className="experience-tag">AutoML</div>
@@ -54,8 +53,6 @@ const Experience = () => {
                     <div className="experience-tag">Venture Capital</div>
                     <div className="experience-tag">Project Management</div>
                     <div className="experience-tag">Agile Development</div>
-                    <div className="experience-tag">Python</div>
-                    <div className="experience-tag">Data Analysis</div>
                     <div className="experience-tag">Financial Analysis</div>
                     <div className="experience-tag">ClickUp</div>
                 </div>

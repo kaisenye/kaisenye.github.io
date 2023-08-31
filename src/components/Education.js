@@ -26,7 +26,12 @@ const Education = () => {
     return (
         <div className='education'>
              <div className={`sub-title fade-up ${titleInView ? 'fade-up-visible' : ''}`} ref={titleRef}>Education</div>
-             <div className={`education-item fade-up ${education1InView ? 'fade-up-visible' : ''}`} ref={education1Ref}>
+
+             <a className={`education-item fade-up ${education1InView ? 'fade-up-visible' : ''}`} 
+                ref={education1Ref}
+                href="https://viterbischool.usc.edu/" 
+                target="_blank" 
+                rel="noopener noreferrer">
                 <div className="education-item-left">
                     <div className="education-title">University of Southern California</div>
                     <div className="education-subtitle">M.S. Electrical & Computer Engineering</div>
@@ -35,8 +40,12 @@ const Education = () => {
                 <div className="education-item-right">
                     <div className="education-logo"><img src={usc} alt="USC Logo" className='education-img-logo'/></div>
                 </div>
-            </div>
-            <div className={`education-item fade-up ${education2InView ? 'fade-up-visible' : ''}`} ref={education2Ref}>
+            </a>
+            <a  className={`education-item fade-up ${education2InView ? 'fade-up-visible' : ''}`} 
+                ref={education2Ref}
+                target="_blank"
+                href="https://bloomington.iu.edu/index.html" 
+                rel="noopener noreferrer">
                 <div className="education-item-left">
                     <div className="education-title">Indiana University at Bloomington</div>
                     <div className="education-subtitle">B.S. Applied Mathematics | B.S. Information Systems</div>
@@ -45,7 +54,7 @@ const Education = () => {
                 <div className="education-item-right">
                     <div className="education-logo"><img src={iu} alt="USC Logo" className='education-img-logo'/></div>
                 </div>
-            </div>
+            </a>
         </div>
     );
 };

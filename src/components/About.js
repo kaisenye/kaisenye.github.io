@@ -14,15 +14,15 @@ const About = () => {
   return (
     <div className="about">
       <div className="sub-title">
-        <p>Every great design begin with an even better story</p>
+        <p>Kaisen Ye</p>
       </div>
       <div className={`content fade-up ${contentInView ? 'fade-up-visible' : ''}`} ref={contentRef}>
         <p>
-          I am a full stack web developer with a background in mechanical
-          engineering. I have a passion for learning and problem solving. I am a
-          team player and I enjoy working with others to achieve a common goal.
-          I am a quick learner and I am always looking for ways to improve my
-          skills.
+          Intrigued by ceaseless learning, 
+          I liken myself to an intellectual sponge—absorbing wisdom and refining my craft daily. 
+          In a collaborative tableau, I'm not just a participant, but a strategic maestro, 
+          orchestrating our collective success. My ethos? Each day is a new canvas, 
+          an opportunity to outdo yesterday's masterpiece.
         </p>
       </div>
     </div>

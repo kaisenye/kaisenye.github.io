@@ -46,30 +46,13 @@ const Projects = () => {
                     Video Sharing Web App
             </div>
 
-            <a href="https://github.com/kaisenye/campground_rating_webapp"
-                target="_blank"
-                className={`project-primary project2 move-up ${project2InView ? 'move-up-visible' : ''}`} 
-                ref={project2Ref}>                
-                <div className="project-primary-inner">
-                    <div className="project-primary-tag">React</div>
-                    <div className="project-primary-tag">Express</div>
-                    <div className="project-primary-tag">Node.js</div>
-                    <div className="project-primary-tag">Firebase</div>
-                </div>
-            </a>
-            <div className="project-primary-title">
-                    Campground Rating Web App
-            </div>
-
             <a href="https://yekai.pages.iu.edu/game/kingsCupGame/card.html"
                 target="_blank"
                 className={`project-primary project3 move-up ${project3View ? 'move-up-visible' : ''}`} 
                 ref={project3Ref}>                
                 <div className="project-primary-inner">
                     <div className="project-primary-tag">React</div>
-                    <div className="project-primary-tag">Express</div>
                     <div className="project-primary-tag">Node.js</div>
-                    <div className="project-primary-tag">Firebase</div>
                 </div>
             </a>
             <div className="project-primary-title">

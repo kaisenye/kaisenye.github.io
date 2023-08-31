@@ -10,21 +10,21 @@ const Home = () => {
         <p>
           Say Hi from <p className="highlight-text">Kaisen</p>{" "}
         </p>
-        <p>Framer Designer and Developer</p>
+        <p>A Developer and Software Enthusiast</p>
       </div>
       <div className="content">
         <p>
-          Hi, I'm Kaisen Ye, a Framer Designer and Developer based in Los
+          Hiiii, I'm Kaisen Ye, currently a USC Computer Engineering graduate student based in Los
           Angeles, CA.
         </p>
       </div>
       <div className="stats">
         <div className="stats-item">
-          <p className="stats-number">10+</p>
+          <p className="stats-number">4+</p>
           <p className="stats-text">Years of Experience</p>
         </div>
         <div className="stats-item">
-          <p className="stats-number">52+</p>
+          <p className="stats-number">10+</p>
           <p className="stats-text">Projects Completed</p>
         </div>
       </div>
