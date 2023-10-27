@@ -5,29 +5,38 @@ import "../css/NavBar.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdPersonOutline } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
-import { VscProject } from "react-icons/vsc";
+// import { VscProject } from "react-icons/vsc";
 import { IoShapesOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
 
 const NavBar = () => {
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    const yOffset = -100; // adjust this value according to your needs
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
   return (
     <div className="nav-bar">
-      <div className="nav-bar-item">
+      <div className="nav-bar-item" onClick={() => handleScroll("home")}>
         <AiOutlineHome />
       </div>
-      <div className="nav-bar-item">
+      <div className="nav-bar-item" onClick={() => handleScroll("about")}>
         <MdPersonOutline />
       </div>
-      <div className="nav-bar-item">
+      <div className="nav-bar-item" onClick={() => handleScroll("work")}>
         <MdWorkOutline />
       </div>
-      <div className="nav-bar-item">
+      {/* <div className="nav-bar-item" onClick={() => handleScroll("projects")}>
         <VscProject />
-      </div>
-      <div className="nav-bar-item">
+      </div> */}
+      <div className="nav-bar-item" onClick={() => handleScroll("projects")}>
         <IoShapesOutline />
       </div>
-      <div className="nav-bar-item">
+      <div className="nav-bar-item" onClick={() => handleScroll("contact")}>
         <AiOutlineMail />
       </div>
     </div>

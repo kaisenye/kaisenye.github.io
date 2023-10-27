@@ -8,6 +8,16 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 
 const Profile = () => {
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    const yOffset = -100; // adjust this value according to your needs
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
+
   return (
     <div className="profile">
       <div className="profile-name">
@@ -24,17 +34,23 @@ const Profile = () => {
       </div>
       <div className="profile-social">
         <div className="profile-icon">
-          <SlSocialLinkedin />
+          <a href="https://www.linkedin.com/in/kaisenye" target="_blank" rel="noopener noreferrer">
+            <SlSocialLinkedin />
+          </a>
         </div>
         <div className="profile-icon">
-          <AiFillGithub />
+          <a href="https://github.com/kaisenye" target="_blank" rel="noopener noreferrer">
+            <AiFillGithub />
+          </a>
         </div>
         <div className="profile-icon">
-          <AiOutlineMail />
+          <a href="mailto:kaisenye20@gmail.com">
+            <AiOutlineMail />
+          </a>
         </div>
       </div>
       <div className="profile-contact">
-        <div className="contact-btn">
+        <div className="contact-btn" onClick={() => handleScroll("contact")}>
           <AiOutlineMail className="icon-contact-email" />
           <p>Contact Me</p>
         </div>

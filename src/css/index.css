@@ -29,6 +29,11 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #bg-video {
   position: fixed;
   left: 0;

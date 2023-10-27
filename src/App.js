@@ -18,22 +18,22 @@ function App() {
         <Profile />
       </div>
       <div className="components-container">
-        <div className="component">
+        <div className="component" id="home">
           <Home />
         </div>
-        <div className="component">
+        <div className="component" id="about">
           <About />
         </div>
-        <div className="component">
+        <div className="component" id="education">
           <Education />
         </div>
-        <div className="component">
+        <div className="component" id="work">
           <Experience />
         </div>
-        <div className="component">
+        <div className="component" id="projects">
           <Projects />
         </div>
-        <div className="component">
+        <div className="component" id="contact">
           <ContactForm />
         </div>
       </div>
