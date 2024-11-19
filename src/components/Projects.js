@@ -1,16 +1,14 @@
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
 
 // css
 import '../css/Projects.css';
 
-const ProjectCard = ({ href, className, projectRef, children }) => (
+const ProjectCard = ({ href, className, children }) => (
     <a 
         href={href}
         target="_blank"
         rel="noreferrer"
         className={className}
-        ref={projectRef}
     >
         {children}
     </a>
@@ -26,41 +24,29 @@ const ProjectTags = ({ tags }) => (
 
 const Projects = () => {
 
-    const [project1Ref, project1InView] = useInView({
-        triggerOnce: false,
-        threshold: 0.1, 
-    });
-
-    const [project2Ref, project2InView] = useInView({
-        triggerOnce: false,
-        threshold: 0.1,
-    });
-
-    const [project3Ref, project3InView] = useInView({
-        triggerOnce: false,
-        threshold: 0.1,
-    });
-
     const projects = [
+        {
+            href: "https://github.com/kaisenye/shopping-wishlist-chrome-extension",
+            className: `project-primary project0`,
+            tags: ["React", "Amplify", "Node.js", "Web Scraping", "GraphQL"],
+            title: "Shopping Wishlist Chrome Extension"
+        },
        
         {
             href: "https://github.com/kaisenye/traffic-light-detection-faster-rcnn",
-            className: `project-primary project1 move-up ${project2InView ? 'move-up-visible' : ''}`,
-            ref: project2Ref,
+            className: `project-primary project1`,
             tags: ["Python", "PyTorch", "Computer Vision", "Machine Learning"],
             title: "Traffic Light Detection using Faster R-CNN"
         },
         {
             href: "https://brickisland.net/DDGSpring2020/",
-            className: `project-primary project2 move-up ${project3InView ? 'move-up-visible' : ''}`,
-            ref: project3Ref,
+            className: `project-primary project2`,
             tags: ["C++", "Geometry Central", "Polyscope", "GoogleTest"],
             title: "Discrete Differential Geometry Research"
         },
         {
             href: "https://github.com/kaisenye/video-sharing-platform-template",
-            className: `project-primary project3 move-up ${project1InView ? 'move-up-visible' : ''}`,
-            ref: project1Ref,
+            className: `project-primary project3`,
             tags: ["React", "Express", "Node.js", "Firebase"],
             title: "Video Sharing Web App"
         }
@@ -78,7 +64,6 @@ const Projects = () => {
                     <ProjectCard 
                         href={project.href}
                         className={project.className}
-                        projectRef={project.ref}
                     >
                         <ProjectTags tags={project.tags} />
                     </ProjectCard>

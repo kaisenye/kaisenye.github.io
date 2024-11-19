@@ -31,7 +31,7 @@ const Experience = () => {
         <div className="experience">
             <div className="sub-title" >Experience</div>
             <div className="experience-item">
-                <div className="experience-title">Founder / Software Engineer</div>
+                <div className="experience-title">Co-Founder / Software Engineer</div>
                 <div className="experience-company">
                     <div className="experience-company-icon">
                         <img src={fluo} alt="FluoAI Logo" className="experience-img-logo"/>
