@@ -1,11 +1,14 @@
-
 .experience-item {
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    padding: 20px 25px;
     color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
     transition: color 0.3s ease-in-out;
     overflow: auto
 }
@@ -33,7 +36,7 @@
 }
 
 .experience-img-logo {
-    width: 1.5rem;
+    width: 1rem;
 }
 
 .experience-company-text {
@@ -96,4 +99,41 @@
 .fade-left.fade-left-visible {
     transform: translateX(0);
     opacity: 1;
+}
+
+.experience-demo-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.experience-demo-button:hover {
+    background: var(--primary-color-dark);
+}
+
+.demo-icon {
+    font-size: 0.85rem;
+}
+
+.experience-demo-container {
+    margin-top: 12px;
+}
+
+/* Add this CSS to your Experience.css file */
+.experience-details ul li {
+    margin-bottom: 1rem; /* Adds space between list items */
+}
+
+/* Optional: Remove margin from last item to avoid extra space at bottom */
+.experience-details ul li:last-child {
+    margin-bottom: 0;
 }

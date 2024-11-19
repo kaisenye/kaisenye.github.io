@@ -34,12 +34,12 @@ const Profile = () => {
       </div>
       <div className="profile-social">
         <div className="profile-icon">
-          <a href="https://www.linkedin.com/in/kaisenye" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/kaisenye" target="_blank" rel="noreferrer" >
             <SlSocialLinkedin />
           </a>
         </div>
         <div className="profile-icon">
-          <a href="https://github.com/kaisenye" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/kaisenye" target="_blank" rel="noreferrer" >
             <AiFillGithub />
           </a>
         </div>

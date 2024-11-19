@@ -3,9 +3,8 @@ import React from "react";
 //css
 import "../css/NavBar.css";
 import { AiOutlineHome } from "react-icons/ai";
-import { MdPersonOutline } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
-// import { VscProject } from "react-icons/vsc";
+import { IoBookOutline } from "react-icons/io5";
 import { IoShapesOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
 
@@ -24,15 +23,12 @@ const NavBar = () => {
       <div className="nav-bar-item" onClick={() => handleScroll("home")}>
         <AiOutlineHome />
       </div>
-      <div className="nav-bar-item" onClick={() => handleScroll("about")}>
-        <MdPersonOutline />
+      <div className="nav-bar-item" onClick={() => handleScroll("education")}>
+        <IoBookOutline />
       </div>
       <div className="nav-bar-item" onClick={() => handleScroll("work")}>
         <MdWorkOutline />
       </div>
-      {/* <div className="nav-bar-item" onClick={() => handleScroll("projects")}>
-        <VscProject />
-      </div> */}
       <div className="nav-bar-item" onClick={() => handleScroll("projects")}>
         <IoShapesOutline />
       </div>

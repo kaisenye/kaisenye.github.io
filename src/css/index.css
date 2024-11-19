@@ -4,6 +4,7 @@ html {
 
 :root {
   --primary-color: #28e98c; /* Define the global CSS variable */
+  --primary-color-dark: #447c60;
   --secondary-color: #c5c5c5;
   --border-color: #ccc;
 

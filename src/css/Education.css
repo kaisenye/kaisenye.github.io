@@ -8,11 +8,11 @@
     justify-content: space-between;
     align-items: flex-start;
     border: 0.5px solid var(--border-color);
-    border-radius: 1rem;
+    border-radius: 15px;
     width: 80%;
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.01s ease;
+    transition: all 0.02s ease-in-out;
 }
 
 .education-title {
@@ -52,7 +52,6 @@
 .education-item:hover {
     border: 0.8px solid var(--primary-color);
     color: var(--primary-color);
-    scale: 1.01;
 }
 .education-item:hover .education-subtitle {
     color: var(--primary-color);

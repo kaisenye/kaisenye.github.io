@@ -14,14 +14,15 @@ const Home = () => {
       </div>
       <div className="content">
         <p>
-          Hiiii, I'm Kaisen Ye, currently a USC Computer Engineering graduate student based in Los
-          Angeles, CA.
+          Hi, I’m Kaisen Ye! I’m passionate about solving meaningful problems through technology and bringing innovative ideas to life. With a background in Electrical and Computer Engineering from USC, I’ve been exploring how machine learning and AI can make everyday systems smarter and more efficient.
+
+          I believe in the power of curiosity, adaptability, and teamwork, and I’m always looking for ways to make an impact through thoughtful innovation. Let’s build something incredible together!
         </p>
       </div>
       <div className="stats">
         <div className="stats-item">
-          <p className="stats-number">4+</p>
-          <p className="stats-text">Years of Experience</p>
+          <p className="stats-number">5</p>
+          <p className="stats-text">Job Experiences</p>
         </div>
         <div className="stats-item">
           <p className="stats-number">10+</p>
