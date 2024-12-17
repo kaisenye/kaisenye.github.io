@@ -15,6 +15,10 @@
     margin-left: 10px;
 }
 
+.project-primary-container {
+    margin-bottom: 3rem;
+}
+
 .project-primary {
     cursor: pointer;
     display: flex;
@@ -32,6 +36,7 @@
     margin-bottom: 1rem;
     padding-bottom: 1.5rem;
     padding-left: 2rem;
+    
 }
 
 .project0 {
@@ -48,6 +53,10 @@
 
 .project3 {
     background-image: url('../assets/project3-cover.png');
+}
+
+.project4 {
+    background-image: url('../assets/project4-cover.png');
     background-size: cover; /* Scale the image to cover the element */   
 }
 
@@ -69,7 +78,6 @@
 .project-primary-title {
     margin-top: 1rem;
     margin-left: 0.5rem;
-    margin-bottom: 3rem;
     font-size: 1.5rem;
     text-decoration: none;
     transition: all 0.3s ease-out;
