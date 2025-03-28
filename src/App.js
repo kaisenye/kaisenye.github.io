@@ -1,42 +1,21 @@
-// css
-import "./css/App.css";
-
-// components
-import Profile from "./components/Profile";
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import ContactForm from "./components/ContactForm";
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Experience from './components/Experience';
 
 function App() {
   return (
-    <div className="App">
-      <div className="profile-container">
-        <Profile />
-      </div>
-      <div className="components-container">
-        <div className="component" id="home">
-          <Home />
-        </div>
-        <div className="component" id="education">
-          <Education />
-        </div>
-        <div className="component" id="work">
-          <Experience />
-        </div>
-        <div className="component" id="projects">
-          <Projects />
-        </div>
-        <div className="component" id="contact">
-          <ContactForm />
-        </div>
-      </div>
-      <div className="nav-container">
-        <NavBar />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="projects" element={<div className="p-8">Projects Page Content</div>} />
+          <Route path="blog" element={<div className="p-8">Blog Page Content</div>} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,198 +1,135 @@
-import React, { useState } from "react";
-import { FaPlay } from "react-icons/fa";
+import React from 'react';
 
-// css
-import "../css/Experience.css";
-import sosv from "../assets/sosv.png";
-import hippsc from "../assets/hippsc.png";
-import fluo from "../assets/fluo.png";
-import { BsPaypal } from "react-icons/bs";
-
-// modals
-import VideoModal from "./Modals/VideoModal";
+// logos
+import fluo from '../assets/logos/fluo.png';
+import sosv from '../assets/logos/sosv.png';
+import hippsc from '../assets/logos/hippsc.png';
+import paypal from '../assets/logos/paypal.png';
 
 const Experience = () => {
-    const [selectedVideo, setSelectedVideo] = useState(null);
+  const experiences = [
+    {
+      company: 'Fluo AI',
+      logo: fluo,
+      title: 'Founder / Engineer',
+      period: '2024',
+      skills: ['Computer Vision', 'Full Stack Development', 'React', 'Node.js', 'AWS', 'Docker', 'CI/CD'],
+      description: 'Created a real-time AI surveillance platform piloted in DTLA, processing 20TB+ footage to detect break-ins and cut security workflow time by 90%.', 
+      bgColor: 'bg-fluo',
+      positionColor: 'text-white'
+    },
+    {
+      company: 'HIPPSC',
+      logo: hippsc,
+      title: 'Software Engineer',
+      period: '2023 - 2024',
+      skills: ['Python', 'Flask', 'Web 3D Visualization', 'RESTful APIs'],
+      description: 'Engineered a full-stack app that automated 12,000+ tool queries, slashing manual inquiry time by 80% and streamlining product variant access.',
+      bgColor: 'bg-hippsc',
+      positionColor: 'text-white'
+    },
+    {
+      company: 'University of Southern California',
+      logo: "",
+      title: 'MS in Computer Engineering',
+      period: '2023 - 2025',
+      skills: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Data Mining'],
+      description: 'Learned a ton about computer vision, machine learning, and data analysis.',
+      bgColor: 'bg-red-800',
+      positionColor: 'text-white'
+    },
+    {
+      company: 'PayPal',
+      logo: paypal,
+      title: 'Software Engineer Intern',
+      period: 'Summer 2022',
+      skills: ['Big Data', 'Data Analysis', 'Machine Learning', 'CI/CD'],
+      description: 'Analyzed 36M+ e-commerce records and built ML models with 98%+ accuracy to predict shopping behavior, while optimizing CI/CD to halve test debug time.',
+      bgColor: 'bg-paypal',
+      positionColor: 'text-white'
+    },
+    {
+      company: 'SOSV',
+      logo: sosv,
+      title: 'Data Analyst Intern',
+      period: 'Summer 2021',
+      skills: ['Venture Capital', 'Data Analysis', 'Financial Modeling', 'Due Diligence'],
+      description: 'Startup performance analysis and due diligence for potential investments.',
+      bgColor: 'bg-sosv',
+      positionColor: 'text-white'
+    },
+    {
+      company: 'Indiana University',
+      logo: "",
+      title: 'BS in Math | Teaching Assistant',
+      period: '2019 - 2023',
+      skills: ['Real Analysis', 'Machine Learning', 'Calculus', 'Linear Algebra'],
+      description: 'Assisted in teaching mathematics courses.',
+      bgColor: 'bg-red-700',
+      positionColor: 'text-red-900'
+    },
+  ];
 
-    const videos = {
-        fluo: "https://hippsc-2023.s3.us-west-1.amazonaws.com/assets/kaisenye/Fluo+Product+Demo+20240827+-+YCW24.mp4",
-        hippsc: "https://hippsc-2023.s3.us-west-1.amazonaws.com/assets/kaisenye/hippsc-exgrip-selection-console-project.mp4"
-    };
-
-    const openVideoModal = (videoKey) => {
-        setSelectedVideo(videos[videoKey]);
-    };
-
-    const closeVideoModal = () => {
-        setSelectedVideo(null);
-    };
-
-    return (
-        <div className="experience">
-            <div className="sub-title" >Experience</div>
-            <div className="experience-item">
-                <div className="experience-title">Co-Founder / Software Engineer</div>
-                <div className="experience-company">
-                    <div className="experience-company-icon">
-                        <img src={fluo} alt="FluoAI Logo" className="experience-img-logo"/>
-                    </div>
-                    <div className="experience-company-text">FluoAI</div>
+  return (
+    <div className="min-h-screen py-8 px-8 mt-14 bg-gradient-to-b from-white to-gray-50">
+      <h1 className="text-xl ml-5 font-bold mb-12 text-gray-800 relative">
+        <span className="relative inline-block after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-1/3 after:h-1 after:bg-blue-500"></span>
+        let's <span className="text-blue-500">collaborate?</span>
+      </h1>
+      
+      {/* Vertical Timeline */}
+      <div className="relative max-w-6xl mx-auto">
+        {/* Timeline line - made thinner and gray */}
+        <div className="absolute left-8 h-full w-0.5 bg-lightgray"></div>
+        
+        {/* Experience items */}
+        {experiences.map((exp, index) => (
+          <div 
+            key={index} 
+            className="relative mb-16 pl-20"
+          >
+            {/* Timeline dot - made smaller and gray */}
+            <div className="absolute left-8 transform -translate-x-1/2 -translate-y-1/4 w-3 h-3 rounded-full bg-lightgray z-10 border-2 border-lightgray"></div>
+            
+            {/* Content box - removed shadow/hover effects, added unique colors, white text */}
+            <div className={`py-6 px-8 rounded-lg ${exp.bgColor}`}>
+              <div className="flex flex-col items-left mb-2">
+                {/* Company logo - kept white background for logo visibility */}
+                <div className="h-5 flex items-center mb-4">
+                  {exp.logo ? (
+                    <img src={exp.logo} alt={exp.company} className="h-full object-contain" />
+                  ) : (
+                    <p className="text-lg text-white font-600">{exp.company}</p>
+                  )}
                 </div>
-                <div className="experience-date">May 2024 - October 2024</div>
-                <div className="experience-tags-container">
-                    <div className="experience-tag">Computer Vision</div>
-                    <div className="experience-tag">OpenAI CLIP</div>
-                    <div className="experience-tag">Video Processing</div>
-                    <div className="experience-tag">React</div>
-                    <div className="experience-tag">AWS Suite</div>
-                    <div className="experience-tag">GraphQL</div>
+                
+                {/* Title and period */}
+                <div>
+                  <p className={`text-white text-base font-600 ${exp.positionColor}`}>{exp.title}</p>
+                  <p className="text-white text-sm">{exp.period}</p>
                 </div>
-                <div className="experience-demo-container">
-                    <button 
-                        className="experience-demo-button"
-                        onClick={() => openVideoModal('fluo')}
-                    >
-                        <FaPlay className="demo-icon" />
-                        <span>View Project Demo</span>
-                    </button>
-                </div>
-                <div className="experience-details">
-                    <ul>
-                        <li>
-                            Designed a scalable surveillance video management system using AWS Kinesis Video Streams for storage, retrieval, 
-                            and streaming, with key frames stored in S3 for fast access, improving processing speed by 75%
-                        </li>
-                        <li>
-                            Integrated OpenAI CLIP into the AI's video analysis system, enabling instant semantic search to identify individuals or 
-                            events within specific time frames based on user-defined queries, reducing security investigation time by over 90%
-                        </li>
-                        <li>
-                            Built a responsive frontend with React, integrating OIDC authentication flow via AWS Cognito and deploying on 
-                            AWS Amplify to ensure fast, secure data transfer and a smooth user experience
-                        </li>
-                        <li>
-                            Secured pilot testing agreements with 2 DTLA apartments for FluoAI's system, achieving over 50% time savings in 
-                            security patrol and investigation workflows during a 2-month trial, as reported by user feedback
-                        </li>
-                    </ul>
-                </div>
+              </div>
+              
+              {/* Description - white text */}
+              <p className="mb-4 text-base text-white leading-relaxed">{exp.description}</p>
+              
+              {/* Skills - updated for better contrast on colored backgrounds */}
+              <div className="flex flex-wrap gap-2">
+                {exp.skills.map((skill, i) => (
+                  <span 
+                    key={i} 
+                    className="px-3 py-1 text-xs bg-white/20 text-white rounded-full border border-white/30"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="experience-item">
-                <div className="experience-title">Software Engineer</div>
-                <div className="experience-company">
-                    <div className="experience-company-icon">
-                        <img src={hippsc} alt="HIPPSC Logo" className="experience-img-logo"/>
-                    </div>
-                    <div className="experience-company-text">HIPPSC</div>
-                </div>
-                <div className="experience-date">August 2023 - May 2024</div>
-                <div className="experience-tags-container">
-                    <div className="experience-tag">Web Development</div>
-                    <div className="experience-tag">RESTful APIs</div>
-                    <div className="experience-tag">3D File Processing</div>
-                    <div className="experience-tag">UI/UX Design</div>
-                    <div className="experience-tag">Robotics Integration</div>
-                    <div className="experience-tag">Product Development</div>
-                </div>
-                <div className="experience-demo-container">
-                    <button 
-                        className="experience-demo-button"
-                        onClick={() => openVideoModal('hippsc')}
-                    >
-                        <FaPlay className="demo-icon" />
-                        <span>View Project Demo</span>
-                    </button>
-                </div>
-                <div className="experience-details">
-                    <ul>
-                        <li>
-                            Developed a web application for HIPPSC's modular tooling series, automating 12,000+ tool combinations. Enabled
-                            end-users to customize tools and download 3D files directly, reducing tooling querying and quoting time by 80%
-                        </li>
-                        <li>
-                            Collaborated on the R&D of tool setup machines and robotic arm integration, contributing to the design of user-friendly
-                            system interfaces and enhancing the customer onboarding process to ensure seamless adoption
-                        </li>
-                        <li>
-                            Gathered feedback from machine shop end-users to design RESTful APIs and implement product variant tables,
-                            ensuring accurate variant data display and enabling 3D file downloads for all product variants across product pages
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div className="experience-item">
-                <div className="experience-title">Software Engineer Intern</div>
-                <div className="experience-company">
-                    <div className="experience-company-icon"><BsPaypal /></div>
-                    <div className="experience-company-text">PayPal</div>
-                </div>
-                <div className="experience-date">Summer 2022</div>
-                <div className="experience-tags-container">
-                    <div className="experience-tag">Python</div>
-                    <div className="experience-tag">Machine Learning</div>
-                    <div className="experience-tag">CI/CD Pipeline</div>
-                    <div className="experience-tag">SQL</div>
-                    <div className="experience-tag">BigQuery</div>
-                    <div className="experience-tag">AutoML</div>
-                </div>
-                <div className="experience-details">
-                    <ul>
-                        <li>
-                            Performed thorough Exploratory Data Analysis using BigQuery, pandas, NumPy, and Plotly on over 36 million
-                            records of online shopping event data to delve into how end users interact with different E-commerce websites
-                        </li>
-                        <li>
-                            Built and trained machine learning models using TensorFlow and Google AutoML to analyze customer online shopping
-                            behaviors and identify potential buying action, achieving an average accuracy score of over 98%
-                        </li>
-                        <li>
-                            Deployed CircleCI validation with mypy and pylint for automated CI/CD workflow across team repos; enhanced
-                            testing process visibility and resulted in a 50% reduction in time spent on identifying failed or unreliable tests
-                        </li>
-                        <li>
-                            Monitored and tested Python scripts to proactively identify potential issues and prevent bugs from occurring
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div className="experience-item">
-                <div className="experience-title">Data Analyst Intern</div>
-                <div className="experience-company">
-                    <div className="experience-company-icon">
-                        <img src={sosv} alt="SOSV Logo" className="experience-img-logo"/>
-                    </div>
-                    <div className="experience-company-text">SOSV</div>
-                </div>
-                <div className="experience-date">Summer 2021</div>
-                <div className="experience-tags-container">
-                    <div className="experience-tag">Venture Capital</div>
-                    <div className="experience-tag">Project Management</div>
-                    <div className="experience-tag">Agile Development</div>
-                    <div className="experience-tag">Financial Analysis</div>
-                    <div className="experience-tag">ClickUp</div>
-                </div>
-                <div className="experience-details">
-                    <ul>
-                        <li>
-                            Collaborated with portfolio managers and target companies to identify growth opportunities and used Python and data
-                            analytic tools to provide data-driven insights on operational efficiency, financial profile, and customer/user behavior
-                        </li>
-                        <li>
-                            Designed and implemented dashboards and reports on ClickUp to provide key stakeholders with real-time insights into
-                            portfolio performance, KPIs (CMGR, CAC, growth profile, etc.), and growth opportunities
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            {selectedVideo && (
-                <VideoModal
-                    isOpen={!!selectedVideo}
-                    onClose={closeVideoModal}
-                    videoSrc={selectedVideo}
-                />
-            )}
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default Experience;
+export default Experience; 
