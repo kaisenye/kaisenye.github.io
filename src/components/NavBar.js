@@ -101,10 +101,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed left-36 top-20 md:left-20 h-full w-16 md:w-48 text-black flex flex-col shadow-sm">
+    <nav className="fixed md:left-20 md:top-20 md:h-full md:w-48 text-black flex md:flex-col
+                    bottom-4 left-4 right-4 w-auto h-16 bg-white  xs:bg-gray rounded-xl z-10">
       {/* Navigation Links */}
       <div className="flex-1 px-2 py-3">
-        <ul className="">
+        <ul className="flex md:flex-col justify-around md:justify-start text-secondary">
           {navItems.map((item, index) => (
             <li key={index}>
               <Link
@@ -113,15 +114,10 @@ const Navbar = () => {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
               >
-                <span className="hidden md:block font-mono">
+                <span className="font-mono">
                   {hoveredIndex === index && animatedText[index] 
                     ? animatedText[index].join('') 
                     : item.name}
-                </span>
-                <span className="md:hidden text-xs font-mono">
-                  {hoveredIndex === index && animatedText[index] 
-                    ? animatedText[index][0] 
-                    : item.name.charAt(0)}
                 </span>
               </Link>
             </li>
@@ -129,10 +125,10 @@ const Navbar = () => {
         </ul>
       </div>
       
-      {/* Footer Section */}
-      <div className="p-2 mt-auto border-t border-gray-200 text-center">
-        <div className="hidden md:block text-xs text-gray-600">© 2024 Kaisen Ye</div>
-        <div className="md:hidden text-xs text-gray-600">© 2024</div>
+      {/* Footer Section - Hidden on mobile */}
+      <div className="hidden md:block p-2 mt-auto border-t border-gray-200 text-center">
+        <div className="hidden md:block text-xs text-secondary">© 2024 Kaisen Ye</div>
+        <div className="md:hidden text-xs text-secondary">© 2024</div>
       </div>
     </nav>
   );

@@ -13,8 +13,10 @@ module.exports = {
         gray: '#808080FF',
         lightgray: '#BFBFBFFF',
         hippsc: '#629622FF',
+        usc: '#8D3232FF',
+        iu: '#991515FF',
         fluo: '#2E2E2EFF',
-        paypal: '#1E4FABFF',
+        paypal: '#436B9FFF',
         sosv: '#584FA1FF',
       },
       fontFamily: {
