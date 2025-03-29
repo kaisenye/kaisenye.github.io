@@ -13,7 +13,7 @@ npm start
 To build for production:
 
 ```bash
-npm run build
+npm run deploy
 ```
 
 ## Technologies Used
