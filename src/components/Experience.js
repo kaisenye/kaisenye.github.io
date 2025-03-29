@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // icons
 import { FiExternalLink } from "react-icons/fi";
@@ -11,6 +11,14 @@ import hippsc from '../assets/logos/hippsc.png';
 import paypal from '../assets/logos/paypal.png';
 
 const Experience = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Animation effect on component mount
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+
   const experiences = [
     {
       company: 'Fluo AI',
@@ -87,7 +95,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="min-h-screen py-8 px-8 mt-14 bg-gradient-to-b from-white to-gray-50">
+    <div className={`min-h-screen py-8 px-8 mt-14 bg-gradient-to-b from-white to-gray-50 transition-all duration-[500ms] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <h1 className="text-xl ml-5 font-bold mb-12 text-gray-800 relative">
         <span className="relative inline-block after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-1/3 after:h-1 after:bg-blue-500"></span>
           where I've <span className="text-blue-500">been</span>

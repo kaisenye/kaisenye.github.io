@@ -72,7 +72,7 @@ const Projects = () => {
       </h1>
       
       {/* Project grid - responsive with 1 card per row */}
-      <div className={`grid grid-cols-1 gap-8 w-full max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`grid grid-cols-1 gap-8 w-full max-w-4xl mx-auto transition-all duration-[500ms] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         {projects.map((project, index) => (
           <div 
             key={index}
