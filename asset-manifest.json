@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.e3b1e119.css",
-    "main.js": "/static/js/main.dc8afc1b.js",
+    "main.css": "/static/css/main.802b51db.css",
+    "main.js": "/static/js/main.a39e50d3.js",
     "static/media/project4-cover.png": "/static/media/project4-cover.438b64747c47179a1135.png",
     "static/media/project3-cover.png": "/static/media/project3-cover.8ff9064ea1ae897e128c.png",
-    "static/media/project1-cover.png": "/static/media/project1-cover.41b915407f6c74519b4d.png",
-    "static/media/project0-cover.png": "/static/media/project0-cover.f16ec342c29bd54409a0.png",
-    "static/media/profilePic.jpg": "/static/media/profilePic.855667a8fd96a3eb0bc3.jpg",
     "static/media/project2-cover.png": "/static/media/project2-cover.825f39271e2183c06a6e.png",
-    "static/media/usc.png": "/static/media/usc.81718b656277e3f66ee7.png",
+    "static/media/hippsc.png": "/static/media/hippsc.d850e1d240c9f951b500.png",
+    "static/media/puffybooth.png": "/static/media/puffybooth.21f1202ba424d78a8c34.png",
+    "static/media/tryfluo.png": "/static/media/tryfluo.4ba6398d9019adce29e4.png",
+    "static/media/wyb.png": "/static/media/wyb.e2c44aa9c9d0c446f8ca.png",
     "static/media/sosv.png": "/static/media/sosv.0cc3fb5ba6166fc42394.png",
-    "static/media/iu.png": "/static/media/iu.ca01de37c48f6e112b99.png",
-    "static/media/hippsc.png": "/static/media/hippsc.96a799b6b32a07576dd3.png",
+    "static/media/paypal.png": "/static/media/paypal.793bfc2a39444a122822.png",
     "index.html": "/index.html",
-    "main.e3b1e119.css.map": "/static/css/main.e3b1e119.css.map",
-    "main.dc8afc1b.js.map": "/static/js/main.dc8afc1b.js.map"
+    "main.802b51db.css.map": "/static/css/main.802b51db.css.map",
+    "main.a39e50d3.js.map": "/static/js/main.a39e50d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3b1e119.css",
-    "static/js/main.dc8afc1b.js"
+    "static/css/main.802b51db.css",
+    "static/js/main.a39e50d3.js"
   ]
 }
