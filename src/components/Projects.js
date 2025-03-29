@@ -57,7 +57,7 @@ const Projects = () => {
       title: "Discrete Geometry Research",
       description: "A responsive personal portfolio website built with React and Tailwind CSS, showcasing projects, experience, and skills with smooth animations and modern design.",
       image: project3Cover,
-      tags: ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
+      tags: ["C++", "Discrete Geometry", "Academic Research"],
       github: "",
       demo: "",
       bgColor: "bg-yellow-600"
