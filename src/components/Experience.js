@@ -5,6 +5,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { LuEye } from "react-icons/lu";
 
 // logos
+import realm from '../assets/logos/realm.png';
 import fluo from '../assets/logos/fluo.png';
 import sosv from '../assets/logos/sosv.png';
 import hippsc from '../assets/logos/hippsc.png';
@@ -21,12 +22,36 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: 'Fluo AI',
+      company: 'Realm',
+      logo: realm,
+      title: 'Software Engineer',
+      period: '2025 - Present',
+      skills: ['Ruby on Rails', 'React', 'AWS', 'TailwindCSS'],
+      description: 'Turning houses into dream homes!', 
+      bgColor: 'bg-realm',
+      positionColor: 'text-white',
+      link: 'https://realmhome.com/',
+      demo: ''
+    },
+    {
+      company: 'Vali Health',
+      logo: "",
+      title: 'Software Engineer',
+      period: '2025',
+      skills: ['LLM','Voice AI', 'Next.js', 'MongoDB', 'Zapier/Make'],
+      description: 'Agentic AI for Home-based Care', 
+      bgColor: 'bg-vali',
+      positionColor: 'text-white',
+      link: 'https://www.vali.health/',
+      demo: ''
+    },
+    {
+      company: 'FluoAI',
       logo: fluo,
       title: 'Founder / Engineer',
       period: '2024',
-      skills: ['Computer Vision', 'Full Stack Development', 'React', 'Node.js', 'AWS', 'Docker', 'CI/CD'],
-      description: 'Created a real-time AI surveillance platform piloted in DTLA, processing 20TB+ footage to detect break-ins and cut security workflow time by 90%.', 
+      skills: ['ML/CV/AI', 'Full Stack', 'React', 'Node.js', 'Python/FastAPI', 'AWS', 'Docker'],
+      description: 'Real-time security camera AI for residential complexes; deployed with 2 DTLA apartments.', 
       bgColor: 'bg-fluo',
       positionColor: 'text-white',
       link: '',
@@ -37,8 +62,8 @@ const Experience = () => {
       logo: hippsc,
       title: 'Software Engineer',
       period: '2023 - 2024',
-      skills: ['Python', 'Flask', 'Web 3D Visualization', 'RESTful APIs'],
-      description: 'Engineered a full-stack app that automated 12,000+ tool queries, slashing manual inquiry time by 80% and streamlining product variant access.',
+      skills: ['Python/Flask', 'Three.js', 'Shopify Liquid', 'AWS', 'Zapier/Make'],
+      description: 'Built web apps, workflow automations, shopify tools, and sold $50k tools',
       bgColor: 'bg-hippsc',
       positionColor: 'text-white',
       link: 'https://www.hippsc.com/',
@@ -50,7 +75,7 @@ const Experience = () => {
       title: 'MS in Computer Engineering',
       period: '2023 - 2025',
       skills: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Data Mining'],
-      description: 'Learned a ton about computer vision, machine learning, and data analysis.',
+      description: 'Computer vision, machine learning, big data',
       bgColor: 'bg-usc',
       positionColor: 'text-white',
       link: 'https://www.usc.edu/',
@@ -62,7 +87,7 @@ const Experience = () => {
       title: 'Software Engineer Intern',
       period: 'Summer 2022',
       skills: ['Big Data', 'Data Analysis', 'Machine Learning', 'CI/CD'],
-      description: 'Analyzed 36M+ e-commerce records and built ML models with 98%+ accuracy to predict consumer eCommerce shopping behavior, while optimizing CI/CD to halve test debug time.',
+      description: 'PayPal Honey, Product Catalog',
       bgColor: 'bg-paypal',
       positionColor: 'text-white',
       link: 'https://www.paypal.com/',
@@ -74,7 +99,7 @@ const Experience = () => {
       title: 'Data Analyst Intern',
       period: 'Summer 2021',
       skills: ['Venture Capital', 'Data Analysis', 'Financial Modeling', 'Due Diligence'],
-      description: 'Startup performance analysis and due diligence for potential investments.',
+      description: 'Startup performance analysis and due diligence',
       bgColor: 'bg-sosv',
       positionColor: 'text-white',
       link: 'https://www.sosv.com/',
@@ -85,7 +110,7 @@ const Experience = () => {
       logo: "",
       title: 'BS in Math | Teaching Assistant',
       period: '2019 - 2023',
-      skills: ['Real Analysis', 'Machine Learning', 'Calculus', 'Linear Algebra'],
+      skills: ['Real Analysis', 'Machine Learning', 'Probability', 'Discrete Geometry'],
       description: 'Learned a ton about math and helped teach it to others!',
       bgColor: 'bg-iu',
       positionColor: 'text-white',
@@ -121,9 +146,9 @@ const Experience = () => {
                 {/* Company logo - kept white background for logo visibility */}
                 <div className="h-5 flex items-center justify-between mb-4">
                   {exp.logo ? (
-                    <img src={exp.logo} alt={exp.company} className="h-full object-contain" />
+                    <img src={exp.logo} alt={exp.company} className="h-4 object-contain" />
                   ) : (
-                    <p className="text-lg text-white font-600">{exp.company}</p>
+                    <p className="text-base text-white font-600">{exp.company}</p>
                   )}
                   <div className="flex items-center gap-2">
                     {exp.demo && (

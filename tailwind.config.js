@@ -12,6 +12,8 @@ module.exports = {
         accent: '#E64100FF',
         gray: '#808080FF',
         lightgray: '#BFBFBFFF',
+        realm: '#0E4331',
+        vali: '#754398FF',
         hippsc: '#629622FF',
         usc: '#8D3232FF',
         iu: '#991515FF',

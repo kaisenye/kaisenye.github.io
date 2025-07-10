@@ -7,7 +7,6 @@ import tryfluo from '../assets/tryfluo.png';
 import puffybooth from '../assets/puffybooth.png';
 import project2Cover from '../assets/project2-cover.png';
 import project3Cover from '../assets/project3-cover.png';
-import project4Cover from '../assets/project4-cover.png';
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,13 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const Blog = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Animation effect on component mount
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <div className="min-h-screen-80 py-8 px-4 sm:px-8 mt-14 bg-gradient-to-b from-white to-gray-50">
       <h1 className="text-xl ml-5 font-bold mb-12 text-gray-800 relative">
