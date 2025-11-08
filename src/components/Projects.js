@@ -1,76 +1,78 @@
-import React, { useState, useEffect } from 'react'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import React, { useState, useEffect } from "react";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 // Project images
-import wyb from '../assets/wyb.png'
-import tryfluo from '../assets/tryfluo.png'
-import puffybooth from '../assets/puffybooth.png'
-import project2Cover from '../assets/project2-cover.png'
-import project3Cover from '../assets/project3-cover.png'
-import romoVideo from '../assets/romo.mp4'
+import wyb from "../assets/wyb.png";
+import tryfluo from "../assets/tryfluo.png";
+import puffybooth from "../assets/puffybooth.png";
+import project2Cover from "../assets/project2-cover.png";
+import project3Cover from "../assets/project3-cover.png";
+import romoVideo from "../assets/romo.mp4";
 
 const Projects = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   // Animation effect on component mount
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+    setIsVisible(true);
+  }, []);
 
   const projects = [
     {
-      title: 'Romo',
-      description: 'LLM-powered AI dication assistant for MacOS',
+      title: "Romo",
+      description: "LLM-powered AI dication assistant for MacOS",
       video: romoVideo,
-      tags: ['Electron', 'React', 'Whisper', 'Llama.cpp', 'MacOS'],
-      demo: 'https://www.tryromo.com/',
-      bgColor: 'bg-neutral-900',
+      tags: ["Electron", "React", "Whisper", "Llama.cpp", "MacOS"],
+      demo: "https://www.tryromo.com/",
+      bgColor: "bg-neutral-900",
     },
     {
-      title: 'Fluo',
-      description: 'Shopping Wishlist Extension',
+      title: "Fluo",
+      description: "Shopping Wishlist Extension",
       image: tryfluo,
-      tags: ['React', 'AWS', 'GraphQL APIs'],
-      github: '',
-      demo: 'https://chromewebstore.google.com/detail/fluo-universal-shopping-w/hiiojmheiffnbbaaaibedbmgdpdmcfki',
-      bgColor: 'bg-orange-600',
+      tags: ["React", "AWS", "GraphQL APIs"],
+      github: "",
+      demo: "https://chromewebstore.google.com/detail/fluo-universal-shopping-w/hiiojmheiffnbbaaaibedbmgdpdmcfki",
+      bgColor: "bg-orange-600",
     },
     {
-      title: 'Where Have You Been?',
-      description: 'Smart travel journal for all your trips.',
+      title: "Where Have You Been?",
+      description: "Smart travel journal for all your trips.",
       image: wyb,
-      tags: ['React', 'Express.js', 'AWS', 'Docker', 'Tailwind CSS'],
-      demo: 'https://main.dv93zam2h6wfe.amplifyapp.com/',
-      bgColor: 'bg-blue-600',
+      tags: ["React", "Express.js", "AWS", "Docker", "Tailwind CSS"],
+      demo: "https://main.dv93zam2h6wfe.amplifyapp.com/",
+      bgColor: "bg-blue-600",
     },
     {
-      title: 'Puffy Photo Booth',
-      description: 'Photo booth anywhere, any time, any device!',
+      title: "Puffy Photo Booth",
+      description: "Photo booth anywhere, any time, any device!",
       image: puffybooth,
-      tags: ['React', 'JavaScript', 'Responsive Design'],
-      github: 'https://github.com/kaisenye/puffy-booth/tree/main',
-      demo: 'https://puffybooth.netlify.app/',
-      bgColor: 'bg-pink-600',
+      tags: ["React", "JavaScript", "Responsive Design"],
+      github: "https://github.com/kaisenye/puffy-booth/tree/main",
+      demo: "https://puffybooth.netlify.app/",
+      bgColor: "bg-pink-600",
     },
     {
-      title: 'Traffic Light Detection Research',
-      description: 'Research on traffic light detection using machine learning models.',
+      title: "Traffic Light Detection Research",
+      description:
+        "Research on traffic light detection using machine learning models.",
       image: project2Cover,
-      tags: ['Big Data', 'Machine Learning', 'Data Visualization', 'Python'],
-      github: 'https://github.com/kaisenye/traffic-light-detection-faster-rcnn',
-      demo: '',
-      bgColor: 'bg-purple-700',
+      tags: ["Big Data", "Machine Learning", "Data Visualization", "Python"],
+      github: "https://github.com/kaisenye/traffic-light-detection-faster-rcnn",
+      demo: "",
+      bgColor: "bg-purple-700",
     },
     {
-      title: 'Discrete Geometry Research',
-      description: 'Research on discrete geometry using machine learning models.',
+      title: "Discrete Geometry Research",
+      description:
+        "Research on discrete geometry using machine learning models.",
       image: project3Cover,
-      tags: ['C++', 'Discrete Geometry', 'Academic Research'],
-      github: '',
-      demo: '',
-      bgColor: 'bg-yellow-600',
+      tags: ["C++", "Discrete Geometry", "Academic Research"],
+      github: "",
+      demo: "",
+      bgColor: "bg-yellow-600",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-8 mt-14 pb-32 bg-gradient-to-b from-white to-gray-50">
@@ -82,11 +84,14 @@ const Projects = () => {
       {/* Project grid - responsive with 1 card per row */}
       <div
         className={`grid grid-cols-1 gap-8 w-full max-w-2xl mx-auto transition-all duration-[500ms] ${
-          isVisible ? 'opacity-100' : 'opacity-0'
+          isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         {projects.map((project, index) => (
-          <div key={index} className={`rounded-lg overflow-hidden ${project.bgColor} flex flex-col w-full`}>
+          <div
+            key={index}
+            className={`rounded-lg overflow-hidden ${project.bgColor} flex flex-col w-full`}
+          >
             {/* Project Content */}
             <div className="p-6 sm:p-8 flex flex-col w-full">
               <div className="flex justify-between items-center mb-2">
@@ -102,7 +107,8 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 text-white hover:text-blue-100 transition-colors"
                     >
-                      <FiGithub className="text-lg" /> <span className="text-sm hidden sm:inline">Code</span>
+                      <FiGithub className="text-lg" />{" "}
+                      <span className="text-sm hidden sm:inline">Code</span>
                     </a>
                   )}
                   {project.demo && (
@@ -121,7 +127,9 @@ const Projects = () => {
 
               {/* Description - Second row */}
               <div className="mb-4 opacity-60">
-                <p className="text-white/90 text-sm sm:text-base leading-relaxed">{project.description}</p>
+                <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                  {project.description}
+                </p>
               </div>
 
               {/* Project Image/Video - Centered and taking more space */}
@@ -149,7 +157,10 @@ const Projects = () => {
               {/* Tags on bottom left */}
               <div className="flex flex-wrap gap-3 mt-6">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="px-4 py-1 text-sm bg-white/20 text-white rounded-full">
+                  <span
+                    key={i}
+                    className="px-4 py-1 text-sm bg-white/20 text-white rounded-full"
+                  >
                     {tag}
                   </span>
                 ))}
@@ -159,7 +170,7 @@ const Projects = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
