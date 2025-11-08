@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./public/index.html"
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {
       colors: {
@@ -26,21 +23,20 @@ module.exports = {
         serif: ['Merriweather', 'serif'],
       },
       fontSize: {
-        'xs': '.75rem',
-        'sm': '.875rem',
-        'base': '0.9rem',
-        'lg': '1.2rem',
-        'xl': '1.5rem',
+        xs: '.75rem',
+        sm: '.875rem',
+        base: '0.9rem',
+        lg: '1.2rem',
+        xl: '1.5rem',
         '2xl': '2rem',
       },
       fontWeight: {
-        '400': '400',
-        '500': '500',
-        '600': '600',
-        '700': '700',
+        400: '400',
+        500: '500',
+        600: '600',
+        700: '700',
       },
     },
   },
   plugins: [],
 }
-

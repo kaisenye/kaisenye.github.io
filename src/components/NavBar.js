@@ -1,110 +1,111 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const navItems = [
-    { name: "about.", path: "/" },
-    { name: "experience.", path: "/experience" },
-    { name: "projects.", path: "/projects" },
-    { name: "blog.", path: "/blog" },
-  ];
+    { name: 'about.', path: '/' },
+    { name: 'experience.', path: '/experience' },
+    { name: 'projects.', path: '/projects' },
+    { name: 'blog.', path: '/blog' },
+  ]
 
   // Extract all unique characters from nav item names
   const allNavChars = [
     ...new Set(
       navItems
         .map((item) => item.name)
-        .join("")
-        .split("")
+        .join('')
+        .split('')
     ),
-  ];
+  ]
 
   // State to track which link is being hovered
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null)
   // State for animated text
-  const [animatedText, setAnimatedText] = useState({});
+  const [animatedText, setAnimatedText] = useState({})
   // Ref for animation intervals
-  const intervalRefs = useRef({});
+  const intervalRefs = useRef({})
 
   // Generate a single random character from the available nav characters
   const getRandomChar = () => {
-    return allNavChars[Math.floor(Math.random() * allNavChars.length)];
-  };
+    return allNavChars[Math.floor(Math.random() * allNavChars.length)]
+  }
 
   // Start character animation for the hovered item
   const startAnimation = (index) => {
-    const itemName = navItems[index].name;
+    const itemName = navItems[index].name
 
     // Initialize the animated text with the original text
     setAnimatedText((prev) => ({
       ...prev,
-      [index]: itemName.split("").map((char) => char),
-    }));
+      [index]: itemName.split('').map((char) => char),
+    }))
 
     // Clear any existing interval for this index
     if (intervalRefs.current[index]) {
-      clearInterval(intervalRefs.current[index]);
+      clearInterval(intervalRefs.current[index])
     }
 
     // Create a new interval that updates random characters
     intervalRefs.current[index] = setInterval(() => {
       setAnimatedText((prev) => {
-        const newText = [...(prev[index] || itemName.split(""))];
+        const newText = [...(prev[index] || itemName.split(''))]
 
         // Randomly change 1-2 characters at a time
-        const numChanges = Math.floor(Math.random() * 2) + 1;
+        const numChanges = Math.floor(Math.random() * 2) + 1
         for (let i = 0; i < numChanges; i++) {
-          const charIndex = Math.floor(Math.random() * itemName.length);
-          newText[charIndex] = getRandomChar();
+          const charIndex = Math.floor(Math.random() * itemName.length)
+          newText[charIndex] = getRandomChar()
         }
 
         return {
           ...prev,
           [index]: newText,
-        };
-      });
-    }, 10); // Update every 10ms for a fast flickering effect
+        }
+      })
+    }, 10) // Update every 10ms for a fast flickering effect
 
     // Stop the animation after 1 second and revert to original text
     setTimeout(() => {
-      stopAnimation(index);
+      stopAnimation(index)
 
       // Set the text back to original after animation stops
       setAnimatedText((prev) => ({
         ...prev,
-        [index]: itemName.split(""),
-      }));
-    }, 300);
-  };
+        [index]: itemName.split(''),
+      }))
+    }, 300)
+  }
 
   // Stop the animation
   const stopAnimation = (index) => {
     if (intervalRefs.current[index]) {
-      clearInterval(intervalRefs.current[index]);
-      delete intervalRefs.current[index];
+      clearInterval(intervalRefs.current[index])
+      delete intervalRefs.current[index]
     }
-  };
+  }
 
   // Handle mouse enter
   const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
-    startAnimation(index);
-  };
+    setHoveredIndex(index)
+    startAnimation(index)
+  }
 
   // Handle mouse leave
   const handleMouseLeave = (index) => {
-    setHoveredIndex(null);
-    stopAnimation(index);
-  };
+    setHoveredIndex(null)
+    stopAnimation(index)
+  }
 
   // Clean up all intervals on unmount
   useEffect(() => {
+    const intervals = intervalRefs.current
     return () => {
-      Object.values(intervalRefs.current).forEach((interval) => {
-        clearInterval(interval);
-      });
-    };
-  }, []);
+      Object.values(intervals).forEach((interval) => {
+        clearInterval(interval)
+      })
+    }
+  }, [])
 
   return (
     <nav
@@ -123,9 +124,7 @@ const Navbar = () => {
                 onMouseLeave={() => handleMouseLeave(index)}
               >
                 <span className="font-mono">
-                  {hoveredIndex === index && animatedText[index]
-                    ? animatedText[index].join("")
-                    : item.name}
+                  {hoveredIndex === index && animatedText[index] ? animatedText[index].join('') : item.name}
                 </span>
               </Link>
             </li>
@@ -135,13 +134,11 @@ const Navbar = () => {
 
       {/* Footer Section - Hidden on mobile */}
       <div className="hidden md:block p-2 mt-auto border-t border-gray-200 text-center">
-        <div className="hidden md:block text-xs text-secondary">
-          © 2024 Kaisen Ye
-        </div>
+        <div className="hidden md:block text-xs text-secondary">© 2024 Kaisen Ye</div>
         <div className="md:hidden text-xs text-secondary">© 2024</div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
