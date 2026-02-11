@@ -1,7 +1,3 @@
-# Portfolio Website
-
-This is a portfolio website built with React and Tailwind CSS.
-
 ## Getting Started
 
 To run the development server:

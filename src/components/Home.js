@@ -20,7 +20,7 @@ const Home = () => {
           hey, i'm <span className="text-accent">kaisen.</span>
         </h1>
         <h2 className="text-base md:text-base text-secondary mb-4 font-500">
-          Developer | Designer | AI Enthusiast
+          developer • designer • ai
         </h2>
         <p className="text-base text-gray max-w-2xl mb-8 leading-relaxed">
           I specialize in building exceptional digital experiences with a focus

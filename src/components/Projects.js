@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 // Project images
-import wyb from "../assets/wyb.png";
-import tryfluo from "../assets/tryfluo.png";
-import puffybooth from "../assets/puffybooth.png";
-import project2Cover from "../assets/project2-cover.png";
-import project3Cover from "../assets/project3-cover.png";
-import romoVideo from "../assets/romo.mp4";
+import wyb from "../assets/images/projects/wyb.webp";
+import tryfluo from "../assets/images/projects/tryfluo.webp";
+import puffybooth from "../assets/images/projects/puffybooth.webp";
+import project2Cover from "../assets/images/projects/project2-cover.webp";
+import project3Cover from "../assets/images/projects/project3-cover.webp";
+import romoVideo from "../assets/images/projects/romo.mp4";
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
