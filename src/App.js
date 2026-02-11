@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Blog from "./components/Blog";
+import Photos from "./components/Photos";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="experience" element={<Experience />} />
           <Route path="projects" element={<Projects />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="photos" element={<Photos />} />
         </Route>
       </Routes>
     </Router>

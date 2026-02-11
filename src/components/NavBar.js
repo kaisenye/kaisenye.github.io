@@ -7,6 +7,7 @@ const Navbar = () => {
     { name: "about.", path: "/" },
     { name: "experience.", path: "/experience" },
     { name: "projects.", path: "/projects" },
+    { name: "photos.", path: "/photos" },
     { name: "blog.", path: "/blog" },
   ];
 
@@ -217,7 +218,7 @@ const Navbar = () => {
       >
         {/* Navigation Links */}
         <div className="flex-1 px-2 py-3">
-          <ul className="flex md:flex-col justify-around md:justify-start text-secondary">
+          <ul className="flex md:flex-col justify-around md:justify-start text-secondary space-y-2">
             {navItems.map((item, index) => (
               <li key={index}>
                 <Link
