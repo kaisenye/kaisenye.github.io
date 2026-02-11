@@ -3,3 +3,4 @@
 @tailwind utilities;
 
 /* Your custom CSS goes here */
+@plugin "tailwind-corner-smoothing";

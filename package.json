@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "caniuse-lite": "^1.0.30001754",
+    "lucide-react": "^0.563.0",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -55,6 +56,7 @@
     "postcss-normalize": "^13.0.1",
     "postcss-preset-env": "^8.5.1",
     "style-loader": "^4.0.0",
+    "tailwind-corner-smoothing": "^1.2.0",
     "tailwindcss": "^3.3.3"
   },
   "overrides": {

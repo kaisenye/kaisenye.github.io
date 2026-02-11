@@ -151,11 +151,11 @@ const Experience = () => {
 
   return (
     <div
-      className={`min-h-screen py-8 px-8 mt-14 bg-gradient-to-b from-white to-gray-50 transition-all duration-[500ms] ${
+      className={`min-h-screen py-8 px-4 lg:px-8 mt-14 bg-gradient-to-b from-white to-gray-50 transition-all duration-[500ms] ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <h1 className="text-xl ml-5 font-bold mb-12 text-gray-800 relative">
+      <h1 className="text-xl ml-0 lg:ml-5 font-bold mb-12 text-gray-800 relative">
         <span className="relative inline-block after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-1/3 after:h-1 after:bg-blue-500"></span>
         where I've <span className="text-blue-500">been</span>
       </h1>
@@ -163,16 +163,16 @@ const Experience = () => {
       {/* Vertical Timeline */}
       <div className="relative max-w-6xl mx-auto">
         {/* Timeline line - made thinner and gray */}
-        <div className="absolute left-8 h-full w-0.5 bg-lightgray"></div>
+        <div className="absolute left-4 lg:left-8 h-full w-0.5 bg-lightgray"></div>
 
         {/* Experience items */}
         {experiences.map((exp, index) => (
-          <div key={index} className="relative mb-16 pl-20">
+          <div key={index} className="relative mb-16 pl-8 lg:pl-16">
             {/* Timeline dot - made smaller and gray */}
-            <div className="absolute left-8 transform -translate-x-1/2 -translate-y-1/4 w-3 h-3 rounded-full bg-lightgray z-10 border-2 border-lightgray"></div>
+            <div className="absolute left-4 lg:left-8 transform -translate-x-1/2 -translate-y-1/4 w-3 h-3 rounded-full bg-lightgray z-10 border-2 border-lightgray"></div>
 
             {/* Content box - removed shadow/hover effects, added unique colors, white text */}
-            <div className={`py-6 px-8 rounded-lg ${exp.bgColor} max-w-2xl`}>
+            <div className={`py-6 px-8 rounded-3xl ${exp.bgColor} max-w-2xl`}>
               <div className="flex flex-col items-left mb-2">
                 {/* Company logo - kept white background for logo visibility */}
                 <div className="h-5 flex items-center justify-between mb-4">

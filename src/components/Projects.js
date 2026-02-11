@@ -53,7 +53,7 @@ const Projects = () => {
       bgColor: "bg-pink-600",
     },
     {
-      title: "Traffic Light Detection Research",
+      title: "Traffic Light Detection",
       description:
         "Research on traffic light detection using machine learning models.",
       image: project2Cover,
@@ -76,9 +76,9 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-8 mt-14 pb-32 bg-gradient-to-b from-white to-gray-50">
-      <h1 className="text-xl ml-5 font-bold mb-12 text-gray-800 relative">
+      <h1 className="text-xl font-semibold mb-12 pl-2 text-gray-800 relative">
         <span className="relative inline-block after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-1/3 after:h-1 after:bg-blue-500"></span>
-        things I've <span className="text-blue-500">built</span>
+        things I've <span className="text-green-600">built</span>
       </h1>
 
       {/* Project grid - responsive with 1 card per row */}
@@ -90,13 +90,13 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`rounded-lg overflow-hidden ${project.bgColor} flex flex-col w-full`}
+            className={`rounded-3xl overflow-hidden ${project.bgColor} flex flex-col w-full`}
           >
             {/* Project Content */}
-            <div className="p-6 sm:p-8 flex flex-col w-full">
+            <div className="px-6 sm:px-8 py-10 flex flex-col w-full">
               <div className="flex justify-between items-center mb-2">
                 {/* Title on top left */}
-                <h3 className="text-lg font-600 text-white">{project.title}</h3>
+                <h3 className="text-xl font-medium text-white">{project.title}</h3>
 
                 {/* Links on top right */}
                 <div className="flex gap-4">
@@ -127,7 +127,7 @@ const Projects = () => {
 
               {/* Description - Second row */}
               <div className="mb-4 opacity-60">
-                <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                <p className="text-white opacity-95 text-sm sm:text-base leading-relaxed">
                   {project.description}
                 </p>
               </div>
